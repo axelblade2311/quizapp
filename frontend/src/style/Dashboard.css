@@ -1,0 +1,140 @@
+/* Full-Screen Layout */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw; /* Full width */
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  overflow: hidden;
+}
+
+/* Header (10% of the screen height) */
+.dashboard-header {
+  height: 10%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  display: flex start;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dashboard-header .items{
+  display: flex;
+  justify-self: start;
+}
+.dashboard-header .items h5{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  list-style: none;
+  margin-right: auto;
+}
+.dashboard-header h5 li{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  list-style: none;
+}
+/* Main Content Wrapper (90% of the screen height) */
+.dashboard-content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 90%;
+}
+
+/* Sidebar (20% width) */
+.dashboard-sidebar {
+  width: 20%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sidebar Navigation */
+.dashboard-sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.dashboard-sidebar li {
+  margin: 15px 0;
+}
+
+.dashboard-sidebar a {
+  color: #4fc3f7;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 12px;
+  transition: 0.3s;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dashboard-sidebar a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Main Content (80% width) */
+.dashboard-main {
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  color: white;
+}
+
+/* Typography */
+h1, h2, h3 {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-content {
+      flex-direction: column;
+  }
+  .dashboard-sidebar {
+      width: 100%;
+      height: 20%;
+      flex-direction: row;
+      justify-content: space-around;
+  }
+  .dashboard-main {
+      width: 100%;
+      height: 80%;
+  }
+}
+
+
+.dashboard-header .items button {
+  width: 10%;
+  height: 60%;
+  padding: 8px;
+  margin-right: 28px;
+  background: #4fc3f7;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
