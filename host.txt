@@ -1,0 +1,34 @@
+1️⃣ Go to Vercel & Create a New Project
+
+    Visit Vercel Dashboard and log in.
+    Click “New Project”.
+    Select your GitHub repository (quizapp).
+    Click "Import".
+
+2️⃣ Configure the Deployment
+
+    Root Directory → Select frontend (since your project has both backend & frontend).
+    Framework Preset → Select Vite.
+    Build & Output Settings:
+        Install Command: npm install
+        Build Command: npm run build
+        Output Directory: dist
+    Click Deploy.
+
+3️⃣ Set Up Environment Variables (If Needed)
+
+    If your frontend fetches data from the backend, go to Settings → Environment Variables and add:
+
+    VITE_API_URL = https://quizapp-cmsl.onrender.com
+
+    (or your correct backend URL)
+
+4️⃣ Wait for Deployment & Get the Live Link
+
+    Vercel will automatically deploy your frontend.
+    After a few minutes, you'll get a Live URL like:
+
+    https://quizapp.vercel.app
+
+    If everything is correct, your frontend should work.
+
